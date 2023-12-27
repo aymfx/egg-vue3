@@ -1,0 +1,60 @@
+{
+  "name": "ruoyi-egg",
+  "version": "1.0.0",
+  "description": "ruoyi egg version",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "captchapng": "^0.0.1",
+    "crypto": "^1.0.1",
+    "egg": "^3",
+    "egg-jwt": "^3.1.7",
+    "egg-redis": "^2.5.0",
+    "egg-scripts": "^2",
+    "egg-sequelize": "^6.0.0",
+    "egg-swagger": "^1.2.2",
+    "exceljs": "^4.3.0",
+    "lib-qqwry": "^1.3.2",
+    "mysql2": "^3.4.1",
+    "path": "^0.12.7",
+    "useragent": "^2.3.0",
+    "utility": "^1.18.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "egg-sequelize-auto-zm": "^1.0.3",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-ruoyi-egg",
+    "stop": "egg-scripts stop --title=egg-server-ruoyi-egg",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "mysql": "egg-sequelize-auto -o ./app/model -d ruoyi_egg -h localhost -u root -p 3306 -x mysql_zm"
+  },
+  "ci": {
+    "version": "16, 18",
+    "type": "github"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Mark<1053082770@qq.com>",
+  "license": "MIT"
+}
